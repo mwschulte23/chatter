@@ -42,6 +42,7 @@ if __name__ == '__main__':
     client = instructor.patch(client, mode=instructor.Mode.TOOLS)
 
     user_query = st.text_input('Ask Milo', 'What items have a current price below base?')
-    process_user_request(client, system_msg, user_query)
+    if st.button('Go'):
+        process_user_request(client, system_msg, user_query)
 
     
